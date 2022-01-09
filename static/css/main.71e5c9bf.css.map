@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.71e5c9bf.css","mappings":"AAAA,cAEE,UAAY,CADZ,oBAEF,CAEA,qCAGE,UACF,CAEA,IACE,iBACF","sources":["css/reset.css"],"sourcesContent":[".reset_anchor {\n  text-decoration: none;\n  color: black;\n}\n\n.reset_anchor:hover,\n:visited,\n:active {\n  color: black;\n}\n\nimg {\n  margin-right: 40px;\n}\n"],"names":[],"sourceRoot":""}
