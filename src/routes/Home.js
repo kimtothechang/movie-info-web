@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Movie from "../components/Movie";
+import styled from "@emotion/styled";
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -22,21 +23,35 @@ const Home = () => {
       {loading ? (
         <h1>Loading...</h1>
       ) : (
-        <div>
-          {movies.map((movie) => (
-            <Movie
-              key={movie.id}
-              id={movie.id}
-              coverImg={movie.medium_cover_image}
-              title={movie.title}
-              summary={movie.summary}
-              genres={movie.genres}
-            />
-          ))}
-        </div>
+        <ContainerPadding>
+          <MovieContainer>
+            {movies.map((movie) => (
+              <Movie
+                key={movie.id}
+                id={movie.id}
+                coverImg={movie.medium_cover_image}
+                title={movie.title}
+                summary={movie.summary}
+                genres={movie.genres}
+              />
+            ))}
+          </MovieContainer>
+        </ContainerPadding>
       )}
     </div>
   );
 };
 
 export default Home;
+
+const MovieContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 500px);
+  grid-auto-rows: auto;
+  gap: 20px;
+`;
+
+const ContainerPadding = styled.div`
+  padding: 80px;
+  background-color: #d6d6d6;
+`;

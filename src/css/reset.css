@@ -1,0 +1,14 @@
+.reset_anchor {
+  text-decoration: none;
+  color: black;
+}
+
+.reset_anchor:hover,
+:visited,
+:active {
+  color: black;
+}
+
+img {
+  margin-right: 40px;
+}
